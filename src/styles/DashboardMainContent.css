@@ -1,0 +1,28 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.middle-section,
+.right-section {
+    flex: 1 1 50%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .middle-section,
+    .right-section {
+        flex: 1 1 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,50 @@
+.dashboard-overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overviewtitle {
+    padding-left: 40px;
+    font-size: 32px;
+    color: #0a2176;
+    font-weight: bold;
+
+}
+
+.week-dropdown {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #0a2176;
+}
+
+.downarrow {
+    font-size: 14px;
+    padding: 6px 0px 0px 0px;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .dashboard-overview {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .overviewtitle,
+    .week-dropdown {
+        padding-left: 0;
+        flex: 1 1 100%;
+    }
+
+    .week-dropdown {
+        justify-content: flex-start;
+    }
+}

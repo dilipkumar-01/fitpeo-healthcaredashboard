@@ -1,0 +1,125 @@
+.middle-section {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+}
+
+.middle-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.top-grid-section {
+    display: flex;
+    gap: 20px;
+    height: auto;
+    position: relative;
+    height: 440px;
+}
+
+.anatomy-health-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-left: 70px;
+    position: relative;
+    height: 400px;
+
+}
+
+.detail-dropdown {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: #0a2176;
+}
+
+.rightarrow {
+    font-size: 18px;
+}
+
+.activities {
+    padding: 0px 15px 10px 40px;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .middle-main {
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .anatomy-health-wrap {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 0px;
+
+    }
+
+    .middle-section {
+        padding: 15px;
+    }
+
+    .activities {
+        padding: 10px 15px;
+    }
+
+    .detail-dropdown {
+        position: static;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .anatomy-health-wrap {
+        padding-left: 10px;
+    }
+
+    .middle-section {
+        padding: 10px;
+    }
+
+    .activities {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .top-grid-section {
+        display: flex;
+
+    }
+
+    .anatomy-health-wrap {
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+    }
+
+    .detail-dropdown {
+        position: static;
+        margin-top: 15px;
+        text-align: right;
+        width: 100%;
+    }
+
+    .activities {
+        padding: 5px;
+    }
+}
