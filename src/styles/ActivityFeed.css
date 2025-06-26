@@ -1,6 +1,6 @@
 .activity-feed {
     background: #EEF2F5;
-    padding: 20px;
+    padding: 20px 20px 0px 20px; /* MODIFIED: Removed bottom padding */
     border-radius: 10px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
