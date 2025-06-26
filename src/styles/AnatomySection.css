@@ -3,7 +3,7 @@
     border-radius: 10px;
     padding: 1px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    height: 400px;
+    height: 100%; /* MODIFIED to fill available height */
     width: 300px;
     display: flex;
     align-items: center;
@@ -82,5 +82,14 @@
 
     .health-indicator-list {
         width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .anatomy-section {
+        height: 400px; /* Revert to fixed height when parent stacks */
+        width: 100%; /* Allow it to take full width in column layout if needed */
+        max-width: 300px; /* But not wider than its original design */
+        margin: 0 auto; /* Center if width is constrained by max-width */
     }
 }
