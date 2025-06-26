@@ -4,7 +4,7 @@
     flex-direction: column;
     box-sizing: border-box;
     width: 100%;
-    padding: 20px;
+    padding: 20px 40px; /* MODIFIED: Standardized padding */
 }
 
 .middle-main {
@@ -17,19 +17,19 @@
 .top-grid-section {
     display: flex;
     gap: 20px;
-    height: auto;
     position: relative;
-    height: 440px;
+    flex: 1; /* MODIFIED: Allow to grow */
+    /* REMOVED: height: auto; and height: 440px; */
 }
 
 .anatomy-health-wrap {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Keep as row for side-by-side Anatomy and HealthCards */
     gap: 40px;
-    padding-left: 70px;
+    padding-left: 0px; /* MODIFIED: Standardized padding */
     position: relative;
-    height: 400px;
-
+    flex: 1; /* MODIFIED: Allow to grow */
+    /* REMOVED: height: 400px; */
 }
 
 .detail-dropdown {
@@ -49,15 +49,13 @@
 }
 
 .activities {
-    padding: 0px 15px 10px 40px;
+    padding: 0px 0px 10px 0px; /* MODIFIED: Standardized padding */
+    flex-shrink: 0; /* MODIFIED: Prevent growing, maintain natural height */
 }
 
-
-
+/* MEDIA QUERIES - Generally keep as is, but review padding overrides if necessary */
 @media (max-width: 1024px) {
-
     .middle-main {
-
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -66,16 +64,15 @@
     .anatomy-health-wrap {
         flex-direction: column;
         gap: 20px;
-        padding-left: 0px;
-
+        padding-left: 0px; /* Ensure consistency */
     }
 
     .middle-section {
-        padding: 15px;
+        padding: 15px; /* Review if this should also be 15px 40px or similar */
     }
 
     .activities {
-        padding: 10px 15px;
+        padding: 10px 15px; /* Review this padding */
     }
 
     .detail-dropdown {
@@ -87,29 +84,28 @@
 
 @media (max-width: 768px) {
     .anatomy-health-wrap {
-        padding-left: 10px;
+        padding-left: 10px; /* Review this padding */
     }
 
     .middle-section {
-        padding: 10px;
+        padding: 10px; /* Review this padding */
     }
 
     .activities {
-        padding: 10px;
+        padding: 10px; /* Review this padding */
     }
 }
 
 @media (max-width: 480px) {
-
     .top-grid-section {
         display: flex;
-
+        flex-direction: column; /* Stack items vertically on small screens */
     }
 
     .anatomy-health-wrap {
         flex-direction: column;
         gap: 15px;
-        padding-left: 0;
+        padding-left: 0; /* Ensure consistency */
     }
 
     .detail-dropdown {
@@ -120,6 +116,6 @@
     }
 
     .activities {
-        padding: 5px;
+        padding: 5px; /* Review this padding */
     }
 }
