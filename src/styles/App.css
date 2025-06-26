@@ -23,13 +23,16 @@ body {
     flex-direction: column;
     overflow-y: auto;
     clip-path: inset(0 0 0 0 round 0px 50px 50px 0px);
+    background-color: #ffffff; /* ADDED */
 }
 
 .content-sections {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    /* REMOVED: min-height: 100vh; */
+    flex: 1; /* ADDED to take available space in flex column parent */
     align-items: stretch; /* MODIFIED */
+    overflow: hidden; /* ADDED to contain children, prevent unexpected scroll on main-content */
 }
 
 /* ------------------------- */
